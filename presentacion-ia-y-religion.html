@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inteligencia Artificial y Religión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- biblioteca de iconos SVG -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.1 5.1L3 18l3 3 6.6-6.6a4 4 0 0 0 5.1-5.1l-2.5 2.5-2.6-.6-.6-2.6z"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><circle cx="9.5" cy="13.5" r="1"/><circle cx="14.5" cy="13.5" r="1"/><path d="M12 8V4.5M3 12v3M21 12v3"/><circle cx="12" cy="3.6" r=".9"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M17.5 14.5c2.5.2 4.5 1.8 4.5 4.5"/></symbol>
+  <symbol id="i-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.1 1-1.1 1.8"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-scroll" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2 2 2 0 0 0 2 2h13"/><path d="M9 7h6"/></symbol>
+  <symbol id="i-temple" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 21h18"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></symbol>
+  <symbol id="i-seal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <!-- casos -->
+  <symbol id="i-mindar" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3.6"/><path d="M5.5 21c0-3.8 2.8-5.8 6.5-5.8s6.5 2 6.5 5.8"/><circle cx="12" cy="10" r="7.4" stroke-dasharray="1.6 2.2"/></symbol>
+  <symbol id="i-blessu" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="9" rx="2.5"/><circle cx="10" cy="11.5" r=".9"/><circle cx="14" cy="11.5" r=".9"/><path d="M7 11L3 6M17 11l4-5M12 7V4M9 21l1.5-5M15 21l-1.5-5"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 8h10M7 11h6"/></symbol>
+  <symbol id="i-avatar" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/><path d="M10 15.2l2 2.3 2-2.3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10 8h4M10 11.5h4M10 15h2.5"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+</svg>
+
+<div id="prog"></div>
+
+<div id="viewport">
+<div id="track">
+
+<!-- 1 PORTADA -->
+<section class="slide cover">
+  <div class="cover-grid">
+    <div class="txt">
+      <span class="tag">Actividad 5 · Cultura Religiosa III</span>
+      <h1>Inteligencia Artificial<br>y <span class="gold">Religión</span></h1>
+      <p>¿Qué cambia en la experiencia religiosa cuando una máquina predica, bendice o responde preguntas de fe?</p>
+      <dl>
+        <dt>Materia</dt><dd>Cultura Religiosa III</dd>
+        <dt>Programa</dt><dd>Ingeniería de Software</dd>
+        <dt>Estudiante</dt><dd>Santiago Cárdenas Aldana</dd>
+        <dt>Actividad</dt><dd>Síntesis y comunicación de aprendizajes sobre religión y cultura digital</dd>
+        <dt>Docente</dt><dd>Amparo Novoa Palacios</dd>
+        <dt>Fecha</dt><dd>Noviembre de 2026</dd>
+      </dl>
+    </div>
+    <!-- ilustración original: luz + circuito -->
+    <svg class="art" viewBox="0 0 400 400" aria-hidden="true" fill="none" stroke-linecap="round">
+      <circle cx="200" cy="200" r="170" stroke="#343b73" stroke-width="1.5"/>
+      <circle cx="200" cy="200" r="125" stroke="#e9c46a" stroke-width="1.5" stroke-dasharray="3 9"/>
+      <circle cx="200" cy="200" r="82" stroke="#5eead4" stroke-width="1.5" opacity=".7"/>
+      <g stroke="#e9c46a" stroke-width="3" opacity=".85">
+        <line x1="200" y1="14" x2="200" y2="44"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(30 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(60 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(90 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(120 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(150 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(180 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(210 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(240 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(270 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(300 200 200)"/>
+        <line x1="200" y1="14" x2="200" y2="44" transform="rotate(330 200 200)"/>
+      </g>
+      <g stroke="#5eead4" stroke-width="2" opacity=".8">
+        <path d="M200 118v-24h40"/><path d="M282 200h28v40"/><path d="M200 282v26h-44"/><path d="M118 200h-26v-44"/>
+      </g>
+      <g fill="#5eead4"><circle cx="240" cy="94" r="6"/><circle cx="310" cy="240" r="6"/><circle cx="156" cy="308" r="6"/><circle cx="92" cy="156" r="6"/></g>
+      <rect x="164" y="164" width="72" height="72" rx="16" fill="#12163a" stroke="#e9c46a" stroke-width="2.5"/>
+      <circle cx="200" cy="200" r="14" fill="#e9c46a"/>
+      <circle cx="200" cy="200" r="24" stroke="#e9c46a" stroke-width="1.5" opacity=".5"/>
+    </svg>
+  </div>
+</section>
+
+<!-- 2 CONCEPTO -->
+<section class="slide">
+  <span class="kicker">01 · El fenómeno</span>
+  <h2>¿De qué estamos hablando?</h2>
+  <p>La <b>IA y la religión</b> se cruzan cuando sistemas como chatbots, robots o generadores de texto e imagen se usan para <b>predicar, acompañar, enseñar o ritualizar</b>, y cuando las religiones reflexionan sobre qué significa esto para la persona humana.</p>
+  <div class="grid g2">
+    <div class="card"><div class="ib"><svg><use href="#i-tool"/></svg></div><h3>IA como herramienta</h3><p>Ayuda a preparar sermones, traducir textos sagrados, organizar comunidades o difundir mensajes.</p></div>
+    <div class="card"><div class="ib teal"><svg><use href="#i-robot"/></svg></div><h3>IA como “actor” religioso</h3><p>Se presenta como figura que bendice, aconseja o “habla” en nombre de una tradición.</p></div>
+  </div>
+</section>
+
+<!-- 3 CARACTERISTICAS -->
+<section class="slide">
+  <span class="kicker">02 · Características</span>
+  <h2>Cuatro rasgos de esta nueva realidad</h2>
+  <div class="grid g2">
+    <div class="card"><div class="ib"><svg><use href="#i-clock"/></svg></div><h3>Disponible 24/7</h3><p>Una respuesta espiritual a cualquier hora, sin cita ni horario de templo.</p></div>
+    <div class="card"><div class="ib teal"><svg><use href="#i-target"/></svg></div><h3>Personalizada</h3><p>Responde según lo que cada usuario pregunta, a la medida de su duda.</p></div>
+    <div class="card"><div class="ib"><svg><use href="#i-user"/></svg></div><h3>Simula autoridad</h3><p>Puede imitar la voz de un sacerdote, un maestro o un personaje bíblico.</p></div>
+    <div class="card"><div class="ib rose"><svg><use href="#i-question"/></svg></div><h3>Cuestiona lo auténtico</h3><p>Abre la pregunta: ¿una experiencia religiosa sin conciencia ni fe es válida?</p></div>
+  </div>
+</section>
+
+<!-- 4 EJEMPLOS -->
+<section class="slide">
+  <span class="kicker">03 · Ejemplos concretos</span>
+  <h2>Casos reales <span class="gold">· toca cada tarjeta</span></h2>
+  <div class="grid g3">
+    <button class="flip" aria-label="Mindar"><div class="in">
+      <div class="face front"><div><div class="ib"><svg><use href="#i-mindar"/></svg></div><small>Japón · 2019</small><h3>Mindar, el monje robot</h3></div><span class="hint">Toca para voltear</span></div>
+      <div class="face back"><p>En el templo budista Kōdai-ji (Kioto), un androide con forma de la deidad Kannon da sermones sobre el Sutra del Corazón. Sus defensores dicen que el budismo no depende del “cuerpo” de quien enseña.</p></div>
+    </div></button>
+    <button class="flip" aria-label="BlessU-2"><div class="in">
+      <div class="face front"><div><div class="ib teal"><svg><use href="#i-blessu"/></svg></div><small>Alemania · 2017</small><h3>BlessU-2, el robot que bendice</h3></div><span class="hint">Toca para voltear</span></div>
+      <div class="face back"><p>Creado por una iglesia protestante para los 500 años de la Reforma, daba bendiciones en varios idiomas. Generó debate: ¿una bendición automática sigue siendo una bendición?</p></div>
+    </div></button>
+    <button class="flip" aria-label="Culto ChatGPT"><div class="in">
+      <div class="face front"><div><div class="ib"><svg><use href="#i-monitor"/></svg></div><small>Alemania · 2023</small><h3>Un culto escrito por ChatGPT</h3></div><span class="hint">Toca para voltear</span></div>
+      <div class="face back"><p>En Fürth, durante un encuentro de la Iglesia evangélica, un servicio fue generado con ChatGPT y presentado con avatares. Asistieron cientos de personas; varias lo sintieron frío y poco emotivo.</p></div>
+    </div></button>
+    <button class="flip" aria-label="Father Justin"><div class="in">
+      <div class="face front"><div><div class="ib teal"><svg><use href="#i-avatar"/></svg></div><small>EE. UU. · 2024</small><h3>“Father Justin”, sacerdote virtual</h3></div><span class="hint">Toca para voltear</span></div>
+      <div class="face back"><p>Un avatar de IA de una organización católica de apologética respondía preguntas de fe. Tras las críticas por aparentar ser un sacerdote, le quitaron la vestimenta clerical y lo rebautizaron “Justin”.</p></div>
+    </div></button>
+    <button class="flip" aria-label="Text With Jesus"><div class="in">
+      <div class="face front"><div><div class="ib"><svg><use href="#i-phone"/></svg></div><small>App · 2023</small><h3>Text With Jesus</h3></div><span class="hint">Toca para voltear</span></div>
+      <div class="face back"><p>Aplicación que permite “chatear” con figuras bíblicas mediante IA. Ilustra el atractivo de la cercanía y también el riesgo de que una máquina “hable” por personajes sagrados.</p></div>
+    </div></button>
+  </div>
+</section>
+
+<!-- 5 TRANSFORMACIONES -->
+<section class="slide">
+  <span class="kicker">04 · Transformaciones</span>
+  <h2>¿Qué cambia en lo religioso?</h2>
+  <div class="seg" id="seg">
+    <button class="on" data-m="old">Antes</button>
+    <button data-m="ai">Con IA</button>
+  </div>
+  <div class="rows" id="rows">
+    <div class="row"><div class="lab"><svg><use href="#i-user"/></svg>Autoridad</div><span class="old">La interpretación la da un líder formado en la tradición.</span><span class="ai">Un sistema entrega interpretaciones sin comunidad ni responsabilidad detrás.</span></div>
+    <div class="row"><div class="lab"><svg><use href="#i-globe"/></svg>Acceso</div><span class="old">Se llega al conocimiento religioso por la comunidad y sus espacios.</span><span class="ai">Cualquiera consulta textos y doctrina al instante, desde el celular.</span></div>
+    <div class="row"><div class="lab"><svg><use href="#i-temple"/></svg>Ritual</div><span class="old">Presencia física, cuerpo, gestos y tiempo compartido.</span><span class="ai">Rituales mediados por pantallas, avatares y textos generados.</span></div>
+    <div class="row"><div class="lab"><svg><use href="#i-users"/></svg>Comunidad</div><span class="old">Se vive con vecinos y fieles que se conocen.</span><span class="ai">Riesgo de una espiritualidad individual, entre el usuario y su chatbot.</span></div>
+    <div class="row"><div class="lab"><svg><use href="#i-chat"/></svg>Comunicación</div><span class="old">Sermones, libros y encuentros presenciales.</span><span class="ai">Contenido religioso creado y difundido masivamente en redes, a veces sin verificar.</span></div>
+  </div>
+</section>
+
+<!-- 6 OPORTUNIDADES Y TENSIONES -->
+<section class="slide">
+  <span class="kicker">05 · Oportunidades y desafíos</span>
+  <h2>Dos caras de la misma moneda</h2>
+  <div class="seg" id="tabs">
+    <button class="on" data-p="p-op">Oportunidades</button>
+    <button data-p="p-ten">Tensiones y desafíos</button>
+  </div>
+  <ul class="panel on grid g2" id="p-op">
+    <li><div class="ib teal"><svg><use href="#i-globe"/></svg></div><div>Acceso al conocimiento<span>Traducción y explicación de textos sagrados para más personas.</span></div></li>
+    <li><div class="ib teal"><svg><use href="#i-users"/></svg></div><div>Inclusión<span>Llegar a quienes no pueden asistir: enfermos, migrantes, zonas aisladas.</span></div></li>
+    <li><div class="ib teal"><svg><use href="#i-tool"/></svg></div><div>Apoyo pastoral<span>Ayuda para preparar contenidos y organizar comunidades.</span></div></li>
+    <li><div class="ib teal"><svg><use href="#i-link"/></svg></div><div>Diálogo interreligioso<span>Un tema común que reúne a distintas tradiciones.</span></div></li>
+  </ul>
+  <ul class="panel grid g2" id="p-ten">
+    <li><div class="ib rose"><svg><use href="#i-seal"/></svg></div><div>Autenticidad<span>¿Vale una bendición o un sermón sin conciencia ni fe?</span></div></li>
+    <li><div class="ib rose"><svg><use href="#i-alert"/></svg></div><div>Desinformación<span>Errores doctrinales, citas inventadas, imágenes y videos falsos de líderes.</span></div></li>
+    <li><div class="ib rose"><svg><use href="#i-lock"/></svg></div><div>Privacidad<span>Se confían dudas y confesiones íntimas a plataformas comerciales.</span></div></li>
+    <li><div class="ib rose"><svg><use href="#i-users"/></svg></div><div>Pérdida de comunidad<span>Reemplazar el encuentro humano por una conversación con una máquina.</span></div></li>
+  </ul>
+</section>
+
+<!-- 7 VOZ DE LAS IGLESIAS -->
+<section class="slide">
+  <span class="kicker">06 · La respuesta de las religiones</span>
+  <h2>Las religiones también opinan</h2>
+  <div class="grid g3">
+    <div class="card"><div class="ib"><svg><use href="#i-scroll"/></svg></div><h3>Rome Call for AI Ethics · 2020</h3><p>Iniciativa impulsada por la Academia Pontificia para la Vida con principios como transparencia, inclusión y responsabilidad. Después se sumaron representantes de otras religiones.</p></div>
+    <div class="card"><div class="ib teal"><svg><use href="#i-globe"/></svg></div><h3>Mensaje del papa Francisco · 2024</h3><p>Para la Jornada Mundial de la Paz pidió que la IA no profundice desigualdades y que el desarrollo tecnológico respete la dignidad humana.</p></div>
+    <div class="card"><div class="ib"><svg><use href="#i-book"/></svg></div><h3>Antiqua et Nova · 2025</h3><p>Nota del Vaticano sobre la relación entre IA e inteligencia humana: advierte que la IA no reemplaza a la persona ni a la relación humana.</p></div>
+  </div>
+  <p><b>Idea común:</b> la tecnología debe estar al servicio de la persona, no al revés.</p>
+</section>
+
+<!-- 8 REFLEXION -->
+<section class="slide">
+  <span class="kicker">07 · Para pensar</span>
+  <h2>Una pregunta para ti</h2>
+  <p class="quote">Si una IA puede decir las palabras de una bendición… ¿qué la hace “válida”: las palabras o la persona que las ofrece?</p>
+  <div class="reveal" id="rev">
+    <button id="revBtn">Ver mi reflexión</button>
+    <p class="ans">Creo que la IA puede <b>acompañar y facilitar</b> la vida espiritual, pero hay algo que no puede reemplazar: la <b>presencia, la responsabilidad y la fe vivida</b> de una persona dentro de una comunidad. La pregunta no es solo qué puede hacer la tecnología, sino qué queremos conservar como humano.</p>
+  </div>
+</section>
+
+<!-- 9 CONCLUSION -->
+<section class="slide">
+  <span class="kicker">08 · Conclusión</span>
+  <h2>Mensaje central</h2>
+  <p class="quote">La IA cambia <span class="gold">cómo</span> se vive y se comunica lo religioso, pero la pregunta de fondo sigue siendo humana.</p>
+  <div class="grid g3">
+    <div class="card"><div class="num">1</div><h3>Cambia el acceso</h3><p>Más personas llegan a textos y respuestas religiosas.</p></div>
+    <div class="card"><div class="num">2</div><h3>Cambia la autoridad</h3><p>Aparecen voces sin comunidad ni responsabilidad.</p></div>
+    <div class="card"><div class="num">3</div><h3>Exige criterio</h3><p>Se necesita pensamiento crítico y ética, también de quienes desarrollamos software.</p></div>
+  </div>
+</section>
+
+<!-- 10 FUENTES -->
+<section class="slide">
+  <span class="kicker">09 · Fuentes</span>
+  <h2>Fuentes consultadas</h2>
+  <ol class="src">
+    <li>Dicasterio para la Doctrina de la Fe y Dicasterio para la Cultura y la Educación. <i>Antiqua et Nova: Nota sobre la relación entre la inteligencia artificial y la inteligencia humana</i>. Ciudad del Vaticano, 2025.</li>
+    <li>Papa Francisco. <i>Mensaje para la LVII Jornada Mundial de la Paz: Inteligencia artificial y paz</i>. Ciudad del Vaticano, 1 de enero de 2024.</li>
+    <li>Pontificia Academia para la Vida. <i>Rome Call for AI Ethics</i>. Roma, 2020.</li>
+    <li>Reportes de prensa sobre los casos: Mindar (Kōdai-ji, Kioto, 2019); BlessU-2 (Iglesia Evangélica de Hesse y Nassau, 2017); culto con ChatGPT en Fürth (Kirchentag, 2023); “Father Justin” (Catholic Answers, 2024); app Text With Jesus (2023).</li>
+    <li>Lecturas y casos de la Unidad 2 de Cultura Religiosa III (agregar títulos y autores).</li>
+  </ol>
+  <p style="font-size:.85rem">Presentación elaborada por Santiago Cárdenas Aldana · Ingeniería de Software · Docente: Amparo Novoa Palacios.</p>
+</section>
+
+</div>
+</div>
+
+<nav id="bar">
+  <button id="prev" aria-label="Anterior"><svg><use href="#i-arrow-l"/></svg><span>Anterior</span></button>
+  <div style="display:flex;align-items:center;gap:14px"><div id="dots"></div><div id="count"></div></div>
+  <button id="next" aria-label="Siguiente"><span>Siguiente</span><svg><use href="#i-arrow-r"/></svg></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
